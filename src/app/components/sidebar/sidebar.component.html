@@ -1,0 +1,53 @@
+<div
+  class="wrapper-modal-aside"
+  [ngClass]="{ 'opacity-out': toggleAside, 'opacity-in': !toggleAside }"
+  [ngStyle]="{ display: display }"
+>
+  <!-- <aside class=" aside animation-in" [ngClass]="{'animation-right-to-left':!toggleAside }"> -->
+  <aside
+    class="aside"
+    [ngClass]="{ 'animation-out': toggleAside, 'animation-in': !toggleAside }"
+  >
+    <img
+      class="close"
+      src="assets/images/close.svg"
+      alt="closs"
+      (click)="closeEvent($event)"
+      width="26px"
+      height="26px"
+    />
+    <main>
+      <article *ngIf="user && user.message.length > 0">
+        <p>{{ user.message }}</p>
+      </article>
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title">Cambio de<br />contraseña única</h3>
+          </div>
+          <div class="col-md-8 mt-3 mt-md-5"></div>
+          <div class="col-md-12 mt-4">
+            <p>
+              Ingrese una constraseña de 6 caracteres alfanuméricos<br />
+              Debe contener como mínino 1 caracter especial
+              <strong>( Ejemplo *, $, #, etc)</strong>
+            </p>
+          </div>
+          <div class="col-md-8"></div>
+          <div class="col-md-8"></div>
+          <div class="col-md-8"></div>
+          <div class="col-md-12">
+            <p>
+              Puede cambiar tu palabra clave (opcional). Debe contener mínimo 3
+              caracteres. <br />
+              Recuerda memorizarla.
+            </p>
+          </div>
+          <div class="col-md-8"></div>
+          <div class="col-md-12 mt-3 mt-md-5"></div>
+        </div>
+      </form>
+    </main>
+    <footer></footer>
+  </aside>
+</div>
