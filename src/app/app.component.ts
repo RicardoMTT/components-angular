@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  showDialog = false;
+
   title = 'components-angular';
   flagOpenAside: boolean = false;
   openAside() {
