@@ -8,9 +8,11 @@
 <br /><br />
 <button (click)="showDialog = !showDialog">will be true</button>
 <router-outlet></router-outlet>
-<!-- <app-confirm-dialog [(visible)]="showDialog">
+<app-confirm-dialog [(visible)]="showDialog">
   <h1>Hello World</h1>
   <button (click)="showDialog = !showDialog" class="btn">Closeeee</button>
 </app-confirm-dialog>
 
-<app-list></app-list> -->
+<app-list></app-list>
+
+<app-overlay></app-overlay>

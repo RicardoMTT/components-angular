@@ -17,7 +17,7 @@ import { dialogAnimation } from 'src/animations/dialog-animation';
       // Cambio de estado general para cuando se inserta un elemento en la página y se desconoce el estado de destino:
       transition('void => *', [
         style({ transform: 'scale3d(.3, .3, .3)' }),
-        animate(3050),
+        animate(300),
       ]),
       transition('* => void', [
         animate(500, style({ transform: 'scale3d(.0, .0, .0)' })),

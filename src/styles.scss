@@ -1,4 +1,11 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
 body{
     margin: 0;
     padding: 0;
+}
+
+
+.overlay-backdrop{
+    background: blue;
 }

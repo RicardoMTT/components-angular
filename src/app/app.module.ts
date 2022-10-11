@@ -8,7 +8,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { ListComponent } from './components/list/list.component';
-
+import { OverlayComponent } from './components/overlay/overlay.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CardComponent } from './components/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,8 +19,15 @@ import { ListComponent } from './components/list/list.component';
     ConfirmDialogComponent,
     DialogComponent,
     ListComponent,
+    OverlayComponent,
+    CardComponent,
   ],
-  imports: [BrowserAnimationsModule, BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule,
+    OverlayModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
