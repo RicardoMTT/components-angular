@@ -2,8 +2,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { dialogAnimation } from 'src/animations/dialog-animation';
 /*
-  El siguiente ejemplo define una transición que comienza ocultando el elemento, 
-  luego se asegura de que se anima correctamente a cualquier estado que esté actualmente 
+  El siguiente ejemplo define una transición que comienza ocultando el elemento,
+  luego se asegura de que se anima correctamente a cualquier estado que esté actualmente
   activo para el disparador:
   transition("void => *", [
     style({ opacity: 0 }),
@@ -17,10 +17,10 @@ import { dialogAnimation } from 'src/animations/dialog-animation';
       // Cambio de estado general para cuando se inserta un elemento en la página y se desconoce el estado de destino:
       transition('void => *', [
         style({ transform: 'scale3d(.3, .3, .3)' }),
-        animate(300),
+        animate(200),
       ]),
       transition('* => void', [
-        animate(500, style({ transform: 'scale3d(.0, .0, .0)' })),
+        animate(200, style({ transform: 'scale3d(.0, .0, .0)' })),
       ]),
     ]),
   ],

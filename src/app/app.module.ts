@@ -11,6 +11,7 @@ import { ListComponent } from './components/list/list.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CardComponent } from './components/card/card.component';
+import { SearchComponent } from './components/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { CardComponent } from './components/card/card.component';
     ListComponent,
     OverlayComponent,
     CardComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserAnimationsModule,

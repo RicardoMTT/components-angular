@@ -1,12 +1,15 @@
-<button (click)="openAside()" style="background-color: blue">
+<app-search (value)="searchByValue($event)" (searchEvent)="search($event)" [placeholder]="'buscar factura'" [startIn]="9"></app-search>
+
+<button (click)="openAside()" class="btn btn-primary">
   Open Sidebar
 </button>
+
 <app-sidebar
   [open]="flagOpenAside"
   (close)="flagOpenAside = false"
 ></app-sidebar>
 <br /><br />
-<button (click)="showDialog = !showDialog">will be true</button>
+<button (click)="showDialog = !showDialog" class="btn btn-secondary">will be true</button>
 <router-outlet></router-outlet>
 <app-confirm-dialog [(visible)]="showDialog">
   <h1>Hello World</h1>

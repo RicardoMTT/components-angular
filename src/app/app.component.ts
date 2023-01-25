@@ -13,4 +13,14 @@ export class AppComponent {
   openAside() {
     this.flagOpenAside = true;
   }
+
+  search(event){
+    console.log('event',event);
+
+  }
+
+  searchByValue(event){
+    console.log('event',event);
+
+  }
 }
