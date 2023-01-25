@@ -1,4 +1,12 @@
 <div class="mb-3 container">
-  <input type="text" class="form-control mb-2 mt-2" [placeholder]="placeholder" #filter >
+  <input type="text"  appOnlyAlphabetic class="form-control mb-2 mt-2" [placeholder]="placeholder" #filter >
   <button (click)="cleanSearch()" class="btn btn-primary">clear</button>
+
+<div [formGroup]="testForm">
+  <input type="text" placeholder="solo letras" class="form-control mb-2 mt-2"  formControlName="name">
+  <div *ngIf="testForm.get('name').hasError('pattern')">
+    <span class="text-danger">Solo letras</span>
+  </div>
+</div>
+
 </div>

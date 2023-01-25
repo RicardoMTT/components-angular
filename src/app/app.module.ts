@@ -12,6 +12,8 @@ import { OverlayComponent } from './components/overlay/overlay.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CardComponent } from './components/card/card.component';
 import { SearchComponent } from './components/search/search.component';
+import { OnlyAlphabeticDirective } from './directives/only-alphabetic.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +25,15 @@ import { SearchComponent } from './components/search/search.component';
     OverlayComponent,
     CardComponent,
     SearchComponent,
+    OnlyAlphabeticDirective,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     OverlayModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

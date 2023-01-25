@@ -1,4 +1,5 @@
 import { Component, Input, Output, OnInit, EventEmitter, ElementRef, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { fromEvent } from 'rxjs';
 import { map, debounceTime } from 'rxjs/operators';
 
@@ -14,8 +15,12 @@ export class SearchComponent implements OnInit {
   @Input() startIn = 0;
   @ViewChild('filter', { static: true }) filter: ElementRef;
   @Output() searchEvent = new EventEmitter();
-
-  constructor() {}
+  testForm:FormGroup;
+  constructor(private fb:FormBuilder) {
+    this.testForm = this.fb.group({
+      name:['',[Validators.pattern('^[a-zA-Z]+$')]]
+    })
+  }
 
 
   ngOnInit(): void {
